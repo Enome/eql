@@ -1,22 +1,9 @@
 var compare = require('./index').compare;
-var eql = require('./index').eql;
+var eql = require('./');
 
-describe('compare', function(){
+describe('eql', function () {
 
-  it('returns a diff string', function(){
-
-    var user = { username: 'Geert' };
-    var evilTwin = { usrname: 'Gert' };
-
-    compare( user, evilTwin ).should.eql('{\u001b[32m\u001b[1m\n  "usrname" : "Gert"\u001b[0m,\n  \u001b[31m\u001b[1m"username" : "Geert"\u001b[0m\n}');
-
-  });
-
-});
-
-describe('eql', function(){
-
-  it('throws a error with the compare string, result and expected', function(){
+  it('throws a error with the compare string, result and expected', function () {
 
     var user = { username: 'Geert' };
     var evilTwin = { usrname: 'Gert' };
