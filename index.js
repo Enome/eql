@@ -16,8 +16,8 @@ module.exports = function (first, second) {
   var dff = diff.compare(first, second);
 
   var compare = '\n\u001b[0m'
-                 + '\n\nResult:   ' + JSON.stringify(second, false, null)
-                 + '\nExpected: ' + JSON.stringify(first, false, null)
+                 + '\n\nResult:   ' + JSON.stringify(first, false, null)
+                 + '\nExpected: ' + JSON.stringify(second, false, null)
                  + '\nDiff: \n' + dff;
 
   assert.deepEqual(first, second, compare);
