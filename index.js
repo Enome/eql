@@ -1,5 +1,6 @@
 var difflet = require('difflet');
 var assert = require('assert');
+var should = require('should');
 
 var compare = function (first, second) {
 
@@ -20,6 +21,10 @@ module.exports = function (first, second) {
                  + '\nExpected: ' + JSON.stringify(second, false, null)
                  + '\nDiff: \n' + dff;
 
-  assert.deepEqual(first, second, compare);
+  try {
+    first.should.eql(second);
+  } catch (err) {
+    throw new Error(compare);
+  }
 
 };

@@ -1,16 +1,22 @@
 {
-        "name": "eql",
-        "version" : "0.0.4",
-        "repository": { "type": "git", "url": "git://github.com/Enome/eql.git" },
-        "description": "Asserts two values using difflet.",
-        "main": "index.js",
-        "author": "Geert Pasteels <twitter.com/enome>",
-        "keywords": [ "asserting", "comparing" ],
-
-        "dependencies": {
-                "difflet": "*"
-        },
-        "devDependencies": {
-                "should": "*"
-        }
+  "name": "eql",
+  "version": "0.0.5",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Enome/eql.git"
+  },
+  "description": "Asserts two values using difflet.",
+  "main": "index.js",
+  "author": "Geert Pasteels <twitter.com/enome>",
+  "keywords": [
+    "asserting",
+    "comparing"
+  ],
+  "dependencies": {
+    "difflet": "*",
+    "should": "~1.0.0"
+  },
+  "devDependencies": {
+    "should": "*"
+  }
 }

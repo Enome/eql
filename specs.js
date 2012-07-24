@@ -12,4 +12,10 @@ describe('eql', function () {
 
   });
 
+
+  it('should know the difference between an int and a string', function () {
+
+    (function () { eql({ number: { deep: '1' } }, { number:  { deep: 1 } }); }).should.throw();
+
+  });
 });
